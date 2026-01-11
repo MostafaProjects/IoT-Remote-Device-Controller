@@ -63,10 +63,10 @@ def roomCheck():
 		#if the light level is > 50000 this means that the room is dark and turns on the led, if < 40000 it means the room has enough light and turns off led
 		if(data > 50000 and lightOn == False):
 			lightOn = True
-			led_transmit("on")
+			ledTransmit("on")
 		elif(data < 40000 and lightOn == True):
 			lightOn = False
-			led_transmit("off")
+			ledTransmit("off")
 		
 		time.sleep(5)
 		timeElapsed += 5
